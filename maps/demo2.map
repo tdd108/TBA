@@ -1,0 +1,23 @@
+[grid]
+size: (5 x 5)
+encodings: WALL(W)
+data : """
+WWWWW
+W   W
+W   W
+W   W
+WWWWW
+"""
+[element]
+player:true
+name:name
+skin: BABA
+position: (2, 2)
+health: 10
+
+[element]
+name: Sword
+skin: SWORD
+position: (4, 3)
+kind: item
+damage: 20

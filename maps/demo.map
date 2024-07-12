@@ -1,0 +1,161 @@
+[grid]
+encodings: WALL(W) GRASS(G) 
+	FENCE(F) CLIFF(C) ALGAE(A) FLOWER(f) ROAD(r)
+	WATER(w)
+size: (68 x 36)
+data: """
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WGGGGGGGGGGGGCCCCGGGGGGGGGGGGWWWWGGGGGGGGGGGGGGGGGGGGGGGGGGGGWWWWWWW
+WGFFFFFFFFFFFCCCCFFFFFFFFFFFGWWWWGFFFFFFFFFFFFFFFFFFFFFFFFF      WWW
+WGFW                       FGWWWWGF                WWW           WWW
+WGF                        FGWWWWGF                W W           WWW
+WGF        A               FGWWWWGF                W W           WWW
+WGF            f           FGWWWWGF                              WWW
+WGF        rrrrrrrr        FGWWWWGF                              WWW
+WGF        rWWWWWWr        rrrrrrrr                        FGWWWWWWW
+WGF        rW     r        WWWWWWWW                        FGWWWWWWW
+WGF        rrrrrrrr        FGWWWWGF          wwww          FGWWWWWWW
+WGF                        FGWWWWGF          wwww          FGWWWWWWW
+WGF                        FGWWWWGF          wwww          FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGFFFFFFFFFFFFFFFFFFFFFFFFFFGWWWWGF                        FGWWWWWWW
+WGGGGGGGGGGGGGGGGGGGGGGGGGGGGWWWWGF                        FGWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWGF                        FGWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWrWWWWWWWWWWWWWWWWWWWWW
+WGGGGGGGGGGGGGGGGGGGGGGGGGGGGWWWWGGGGGGGGGGGGWrWGGGGGGGGGGGGGWWWWWWW
+WGFFFFFFFFFFFFFFFFFFFFFFFFFFGWWWWGFFFFFFFFFFFWrWFFFFFFFFFFFFGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGF                        FGWWWWGF                        FGWWWWWWW
+WGFFFFFFF            FFFFFFFGWWWWGF                        FGWWWWWWW
+WGGGGGGGGGGGGGGGGGGGGGGGGGGGGWWWWGF                        FGWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWGFWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+"""
+
+[element]
+name: John
+player: true
+skin: BADBAD
+position: (45,8)
+health: 10
+
+[element]
+name: blue
+skin: KEY
+color: red
+kind: item
+position: (46, 5)
+
+[element]
+name: red
+skin: KEY
+color: red
+kind: item
+position: (44, 5)
+
+[element]
+name: Durendale
+skin: SWORD
+position: (47,5)
+kind: item
+damage: 2
+
+[element]
+name: Stick
+skin: STICK
+position: (47,6)
+kind: item
+damage: 2
+
+[element]
+name: burger
+skin: BURGER
+position: (48,5)
+kind: item
+
+[element]
+name: burger
+skin: CAKE
+position: (48,6)
+kind: item
+
+[element]
+name: cash
+skin: CASH
+position: (48,9)
+kind: item
+
+[element]
+name: cash
+skin: CASH
+position: (49,9)
+kind: item
+
+[element]
+name: cash
+skin: CASH
+position: (50,9)
+kind: item
+
+[element]
+name: door
+skin: DOOR
+locked: KEY red
+position: (52,5)
+kind: obstacle
+
+[element]
+name: fire
+skin: FIRE
+position: (52,6)
+kind: obstacle
+
+[element]
+name: Waldo
+skin: BABA
+position: (47, 8)
+kind: enemy
+health: 10
+zone: (46, 7) (5 x 5)
+behavior: agressive
+damage: 10
+
+
+[element]
+name: Josh
+skin: BABA
+position: (40, 8)
+kind: friend
+health: 10
+zone: (46, 7) (5 x 5)
+behavior: stroll
+trade: CAKE -> KEY red, CASH -> KEY blue, CASH -> CAKE
+
+[element]
+name: JoshUA
+skin: BABA
+position: (41, 8)
+kind: friend
+health: 10
+zone: (46, 7) (5 x 5)
+behavior: stroll
+
+[element]
+name: JoshIE
+skin: BABA
+position: (41, 9)
+kind: friend
+health: 10
+zone: (46, 7) (5 x 5)
+behavior: stroll
+trade: CASH -> KEY red,CASH -> KEY blue, CASH -> PIZZA
